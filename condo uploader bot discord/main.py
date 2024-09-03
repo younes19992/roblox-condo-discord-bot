@@ -1,20 +1,14 @@
 import sys
 from requests import post, get
 import requests
-from os import name as os_name, system
 #and i found an downloader
 from discord import Webhook, RequestsWebhookAdapter
 import codecs
 import json
 import discord
 from discord.ext import commands
-import secrets
 from unblacklister import uniqueId, referentt, assetId
 import os
-from ad import advertise
-import lxml.etree
-from xml.dom import minidom
-from xml.etree import ElementTree as etree
 from keep_alive import keep_alive
 
 
@@ -154,7 +148,6 @@ async def Upload(ctx):
   yn = await bot.wait_for("message")
   if 'y' in yn.content.lower():
       await ctx.send("**Marked as (Public)**")
-      advertise(link)
   elif 'n' in yn.content.lower():
      await ctx.send(":x:**Marked as (Private)**:x:")
      #return
